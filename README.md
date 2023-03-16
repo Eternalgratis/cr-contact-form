@@ -1,4 +1,4 @@
-## Porfolio-mobile: Milestone 5
+## Porfolio-mobile
 
 > This portfolio project demonstrates Javascript
 > This is a portfolio that shows my proficiency as I go through Microverse. It is a work-in-progress and I hope to make it a masterpiece.
