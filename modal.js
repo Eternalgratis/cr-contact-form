@@ -1,3 +1,4 @@
+/* eslint-disable */
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -23,7 +24,7 @@ const proj = [
 
     projectSubtitle: 'Gain+Glory',
 
-    skills: [ 'JavaScript', 'HTML', 'Css' ],
+    skills: ['JavaScript', 'HTML', 'Css'],
 
     href: 'https://github.com/Eternalgratis/Math-magician',
 
@@ -38,7 +39,7 @@ const proj = [
 
     projectSubtitle: 'Gain+Glory',
 
-    skills: [ 'JavaScript', 'CSS', 'HTML' ],
+    skills: ['JavaScript', 'CSS', 'HTML'],
 
     href: 'https://github.com/Eternalgratis/Bookstore',
 
@@ -53,9 +54,9 @@ const proj = [
 
     projectSubtitle: 'Gain+Glory',
 
-    skills: [ 'HTML', 'CSS', 'JavaScript' ],
+    skills: ['HTML', 'CSS', 'JavaScript'],
 
-    href:'https://github.com/Eternalgratis/Leaderboard',
+    href: 'https://github.com/Eternalgratis/Leaderboard',
 
     // liveUrl:
     // sourceUrl:
@@ -68,7 +69,7 @@ const proj = [
 
     projectSubtitle: 'Gain+Glory',
 
-    skills: [ 'React', 'CSS', 'HTML' ],
+    skills: ['React', 'CSS', 'HTML'],
 
     href: 'https://github.com/Eternalgratis/Space-Travelers',
 
@@ -83,7 +84,7 @@ const proj = [
 
     projectSubtitle: 'Gain+Glory',
 
-    skills: [ 'Ruby on rails', 'Jsx', 'React' ],
+    skills: ['Ruby on rails', 'Jsx', 'React'],
 
     href: 'https://github.com/Eternalgratis/car_cruise_rental',
 
@@ -98,7 +99,7 @@ const proj = [
 
     projectSubtitle: 'Gain+Glory',
 
-    skills: [ 'JavaScript', 'CSS', 'HTML' ],
+    skills: ['JavaScript', 'CSS', 'HTML'],
 
     href: 'https://github.com/Eternalgratis/AwesomebooksES6',
 
@@ -177,7 +178,7 @@ function sendFormData() {
 
   const xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://formspree.io/f/mpzbbknz', true);
-  xhr.onload = function() {
+  xhr.onload = function () {
     if (xhr.status === 200) {
       alert('Form data sent!');
     } else {
@@ -186,7 +187,7 @@ function sendFormData() {
   };
 
   xhr.send(formData);
-  }
+}
 
 const formInfo = document.getElementById('contact-details');
 formInfo.addEventListener('submit', (event) => {
