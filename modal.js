@@ -1,6 +1,6 @@
 /* eslint-disable */
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+var hamburger = document.querySelector('.hamburger');
+var navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
@@ -162,35 +162,32 @@ closeContainer.addEventListener('click', () => {
 });
 
 // Form Validation
-const form = document.querySelector('.contact-form');
+const form = document.querySelector('#contact-details');
 const formEmail = form.elements.email;
 const formErrorMessage = document.querySelector('.error-message');
 
-form.addEventListener('submit', (event) => {
-  if (formEmail.value.match(/[A-Z]/)) {
-    event.preventDefault();
-    formErrorMessage.classList.remove('hide');
-  }
-});
-
-function sendFormData() {
-  const formData = new FormData();
-
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://formspree.io/f/mpzbbknz', true);
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      alert('Form data sent!');
-    } else {
-      alert('Error sending form data');
-    }
-  };
-
-  xhr.send(formData);
-}
-
-const formInfo = document.getElementById('contact-details');
-formInfo.addEventListener('submit', (event) => {
+form.addEventListener('submit', async(event) => {
   event.preventDefault();
-  sendFormData();
+  const email =  document.getElementById('email').value;
+  const name =  document.getElementById('name').value;
+  const continent =  document.getElementById('continent').value;
+  const message =  document.getElementById('message').value;
+
+  const url = 'https://formspree.io/f/mpzbbknz';
+
+  const options = {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body :JSON.stringify({email,name, continent, message})
+  }
+  try {
+    const response = await fetch(url, options)
+    console.log('response', response)
+    form.reset();
+  }
+  catch(error) {
+    console.log(error)
+  }
 });
