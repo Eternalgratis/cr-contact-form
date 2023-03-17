@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* hintrc-disable */
 var hamburger = document.querySelector('.hamburger');
 var navMenu = document.querySelector('.nav-menu');
 
@@ -173,14 +174,14 @@ form.addEventListener('submit', async(event) => {
   const continent =  document.getElementById('continent').value;
   const message =  document.getElementById('message').value;
 
-  const url = 'https://formspree.io/f/mpzbbknz';
+  const url = `https://formspree.io/f/mpzbbknz`;
 
   const options = {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
     },
-    body :JSON.stringify({email,name, continent, message})
+    body :JSON.stringify({email, name, continent, message})
   }
   try {
     const response = await fetch(url, options)
@@ -188,6 +189,5 @@ form.addEventListener('submit', async(event) => {
     form.reset();
   }
   catch(error) {
-    console.log(error)
   }
 });
