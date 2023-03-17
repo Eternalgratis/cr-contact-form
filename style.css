@@ -448,10 +448,6 @@ h4 {
   cursor: pointer;
 }
 
-.button:hover {
-  background: #36B37F;
-}
-
 .button:enabled {
   color: #fff;
   background: #36b37f;
