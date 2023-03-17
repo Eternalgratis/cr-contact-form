@@ -156,6 +156,7 @@ form.addEventListener('submit', async(event) => {
   event.preventDefault();
   const email =  document.getElementById('email').value;
   const name =  document.getElementById('name').value;
+  const lastName = document.getElementById('last-name').value;
   const continent =  document.getElementById('continent').value;
   const message =  document.getElementById('message').value;
 
@@ -166,7 +167,7 @@ form.addEventListener('submit', async(event) => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body :JSON.stringify({email, name, continent, message})
+    body :JSON.stringify({email, name, lastName, continent, message})
   }
   try {
     const response = await fetch(url, options)
