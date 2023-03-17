@@ -1,20 +1,4 @@
 /* eslint-disable */
-/* hintrc-disable */
-var hamburger = document.querySelector('.hamburger');
-var navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-link').forEach((n) => {
-  n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-  });
-});
-
 // pop-up menu
 
 const proj = [
@@ -163,6 +147,7 @@ closeContainer.addEventListener('click', () => {
 });
 
 // Form Validation
+ 
 const form = document.querySelector('#contact-details');
 const formEmail = form.elements.email;
 const formErrorMessage = document.querySelector('.error-message');
@@ -174,7 +159,7 @@ form.addEventListener('submit', async(event) => {
   const continent =  document.getElementById('continent').value;
   const message =  document.getElementById('message').value;
 
-  const url = `https://formspree.io/f/mpzbbknz`;
+  const url = `https://formspree.io/f/mleklyzv`;
 
   const options = {
     method: "POST",

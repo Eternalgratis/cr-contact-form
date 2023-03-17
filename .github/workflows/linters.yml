@@ -33,6 +33,7 @@ jobs:
       - name: Webhint Report
         run: npx hint .
   stylelint:
+  
     name: Stylelint
     runs-on: ubuntu-18.04
     steps:
